@@ -10,12 +10,19 @@ extends Control
 ##referance to the timer to create a pineapple
 @export var timer : Timer
 
+##referance to the user interface
+@export var user_interface : User_Interface
+##view referance
+@export var view : User_Interface.Views
+
 ##current amount of pineapples
 var pineapples : int = 0
 
 ##sets the label at launch
 func _ready() -> void:
 	update_label_text()
+	
+	user_interface.navigation_requested.connect(_on_navigation_request)
 
 ##creates 1 pineapple
 func  create_pineapple() -> void:
@@ -37,3 +44,11 @@ func _on_button_pressed() -> void:
 
 func _on_timer_timeout() -> void:
 	create_pineapple()
+
+##watch for naigation request
+func _on_navigation_request(requested_view : User_Interface.Views) -> void:
+	if requested_view == view:
+		visible = true
+		return
+	
+	visible = false
