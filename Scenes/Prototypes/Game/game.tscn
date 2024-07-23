@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://5fg4dvta8j4u"]
+[gd_scene load_steps=4 format=3 uid="uid://5fg4dvta8j4u"]
 
 [ext_resource type="Script" path="res://Scenes/Prototypes/Game/game.gd" id="1_knaks"]
 [ext_resource type="PackedScene" uid="uid://cw57oqc2vs3xu" path="res://Scenes/user_interface.tscn" id="2_umdbi"]
+[ext_resource type="Script" path="res://Scripts/Handlers/handler_pineapple.gd" id="2_yiv4m"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_knaks")
 
 [node name="Handlers" type="Node" parent="."]
+
+[node name="Pineapples" type="Node" parent="Handlers"]
+script = ExtResource("2_yiv4m")
 
 [node name="user_interface" parent="." instance=ExtResource("2_umdbi")]

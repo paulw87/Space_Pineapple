@@ -1,8 +1,6 @@
 class_name prototype_auto_pineapple
 extends Control
 
-##referance to the label displaying the amount of pineapples created
-@export var label : Label
 
 ##referance to the button to start auto creating pineapples
 @export var button : Button
@@ -18,25 +16,16 @@ extends Control
 
 ##sets the label at launch
 func _ready() -> void:
-	update_label_text()
 	
 	visible = true
 	
 	user_interface.navigation_requested.connect(_on_navigation_request)
 
-##temp func to update label
-func _process(_delta: float) -> void:
-	update_label_text()
-
 
 ##creates 1 pineapple
 func  create_pineapple() -> void:
-	Game.ref.data.pineapples += 1
-	update_label_text()
+	HandlerPineapples.ref.create_pineapple(1)
 
-##updates the text of the label to refelct a change in pineapples created
-func update_label_text() -> void :
-	label.text = "Pineapples: %s" %Game.ref.data.pineapples
 
 ##start the timer and disabled the button
 func start_auto_pineapple() -> void:
