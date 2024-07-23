@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://5fg4dvta8j4u"]
+
+[ext_resource type="Script" path="res://Scenes/Prototypes/Game/game.gd" id="1_knaks"]
+[ext_resource type="PackedScene" uid="uid://cw57oqc2vs3xu" path="res://Scenes/user_interface.tscn" id="2_umdbi"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_knaks")
+
+[node name="user_interface" parent="." instance=ExtResource("2_umdbi")]

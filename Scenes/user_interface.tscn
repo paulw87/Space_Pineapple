@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw57oqc2vs3xu"]
+[gd_scene load_steps=5 format=3 uid="uid://cw57oqc2vs3xu"]
 
 [ext_resource type="Script" path="res://Scenes/user_interface.gd" id="1_1col8"]
 [ext_resource type="PackedScene" uid="uid://srx4qykcm41m" path="res://Scenes/Prototypes/auto pineapple/prototype_auto_pineapple.tscn" id="1_ucv0q"]
+[ext_resource type="Script" path="res://Scenes/pineapples_label.gd" id="2_wpqwc"]
 [ext_resource type="PackedScene" uid="uid://b5q20mei7dbhy" path="res://Scenes/Prototypes/click/prototype_clicker.tscn" id="3_n7s02"]
 
 [node name="user_interface" type="Control"]
@@ -87,9 +88,10 @@ theme_override_constants/margin_bottom = 16
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Leftpanel/VBoxContainer/Resources/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/Leftpanel/VBoxContainer/Resources/MarginContainer/VBoxContainer"]
+[node name="pineapples_label" type="Label" parent="HBoxContainer/Leftpanel/VBoxContainer/Resources/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Pineapples: 100"
+script = ExtResource("2_wpqwc")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2

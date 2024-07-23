@@ -15,8 +15,6 @@ extends Control
 ##view referance
 @export var view : User_Interface.Views
 
-##current amount of pineapples
-var pineapples : int = 0
 
 ##sets the label at launch
 func _ready() -> void:
@@ -26,14 +24,19 @@ func _ready() -> void:
 	
 	user_interface.navigation_requested.connect(_on_navigation_request)
 
+##temp func to update label
+func _process(_delta: float) -> void:
+	update_label_text()
+
+
 ##creates 1 pineapple
 func  create_pineapple() -> void:
-	pineapples += 1
+	Game.ref.data.pineapples += 1
 	update_label_text()
 
 ##updates the text of the label to refelct a change in pineapples created
 func update_label_text() -> void :
-	label.text = "Pineapples: %s" %pineapples
+	label.text = "Pineapples: %s" %Game.ref.data.pineapples
 
 ##start the timer and disabled the button
 func start_auto_pineapple() -> void:
