@@ -19,6 +19,8 @@ var pineapples : int = 0
 func _ready() -> void:
 	update_lebel_text()
 	
+	visible = false
+	
 	user_interface.navigation_requested.connect(_on_navigation_request)
 
 ## creates pineapple
