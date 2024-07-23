@@ -61,6 +61,9 @@ text = "prototype clicker"
 layout_mode = 2
 text = "prototype generator"
 
+[node name="PrototypeUpgradesLinkButton" type="LinkButton" parent="HBoxContainer/Leftpanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Leftpanel/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 16
@@ -117,3 +120,4 @@ view = 1
 
 [connection signal="pressed" from="HBoxContainer/Leftpanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/PrototypeClickerLink" to="." method="_on_prototype_clicker_link_pressed"]
 [connection signal="pressed" from="HBoxContainer/Leftpanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/PrototypeAutoPineappleLink" to="." method="_on_prototype_auto_pineapple_link_pressed"]
+[connection signal="pressed" from="HBoxContainer/Leftpanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/PrototypeUpgradesLinkButton" to="." method="_on_prototype_upgrades_link_button_pressed"]
