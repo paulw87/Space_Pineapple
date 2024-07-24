@@ -43,19 +43,18 @@ layout_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_right = 64
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
 
 [node name="Upgrade_01" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 
 [node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2/Upgrade_01"]
-layout_mode = 2
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 1424.0
-offset_bottom = 144.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -66,10 +65,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/Upgrade_01/MarginContainer"]
 layout_mode = 2
