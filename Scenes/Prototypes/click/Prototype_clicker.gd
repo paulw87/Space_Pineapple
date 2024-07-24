@@ -1,8 +1,10 @@
 class_name Prototype_clicker
 extends Control
 
+
 ##referance to the make pineapple button
 @export var button : Button
+
 
 ##referance to the user interface
 @export var user_interface : User_Interface
@@ -25,6 +27,7 @@ func create_pineapple() -> void:
 ##triggered when the create pineapple button is pressed
 func _on_button_pressed() -> void:
 	create_pineapple()
+
 
 ##watch for naigation request
 func _on_navigation_request(requested_view : User_Interface.Views) -> void:

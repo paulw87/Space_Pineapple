@@ -2,6 +2,7 @@ class_name Game
 extends Node
 ## Main node of the game
 
+
 ## Singleton referance
 static var ref : Game
 
@@ -17,6 +18,7 @@ func _singleton_check() -> void:
 
 ## data contains the data to save and load
 var data : Data
+
 
 ## sigleton check and initiziation
 func _enter_tree() -> void:

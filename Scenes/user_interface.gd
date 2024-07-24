@@ -24,6 +24,7 @@ func _on_prototype_auto_pineapple_link_pressed() -> void:
 func _on_prototype_clicker_link_pressed() -> void:
 	navigation_requested.emit(Views.PROTOTYPE_CLICKER)
 
+
 ##triggered when the upgrades link is clicked
 func _on_prototype_upgrades_link_button_pressed() -> void:
 	navigation_requested.emit(Views.PROTOTYPE_UPGRADES)
