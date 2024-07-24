@@ -2,6 +2,9 @@ class_name Up01ClickerUpgrade
 extends Node
 ## Upgrade 01 - Incresses pineapples created by the clicker
 
+## emitted when the upgrade has leveled up
+signal leveled_up
+
 
 ## level of the upgrade
 var level : int
@@ -38,8 +41,11 @@ func can_afford() -> bool:
 	return false
 
 
+## consumes pineapples to level up
 func level_up() -> void:
 	var error : Error = HandlerPineapples.ref.consume_pineapple(cost())
 	if not error:
 		level += 1
 		Game.ref.data.up_01_level = level
+		
+		leveled_up.emit()
